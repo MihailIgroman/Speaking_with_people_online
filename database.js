@@ -42,7 +42,7 @@ dbWrapper
                 autor INTEGER,
                 FOREIGN KEY(autor) REFERENCES user(user_id)
             );`
-        );
+        );s
       } else {
         console.log(await db.all("SELECT * from user"));
       }
@@ -67,6 +67,16 @@ module.exports = {
     await db.run(
       `INSERT INTO message (content, autor) VALUES (?, ?)`,
       [msg, userId]
+    );
+  },
+  isUserExist: async (login) => {
+    const candidate = await db.all(`SELECT * FROM user WHERE login = ?`, [login]);
+    return !!candidate.length;
+  },
+  addUser: async (user) => {
+    await db.run(
+      `INSERT INTO user (login, password) VALUES (?, ?)`,
+      [user.login, user.password]
     );
   }
 };
