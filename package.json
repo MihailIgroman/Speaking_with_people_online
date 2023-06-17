@@ -4,32 +4,20 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MihailIgroman/Speaking_with_people_online.git"
-  },
-  "keywords": [
-    "NodeJS",
-    "Chat"
-  ],
-  "author": "Michael",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MihailIgroman/Speaking_with_people_online/issues"
-  },
-  "homepage": "https://github.com/MihailIgroman/Speaking_with_people_online#readme",
-  "dependencies": {
-    "socket.io": "^4.6.1",
-    "sqlite": "^4.2.0",
-    "sqlite3": "^5.1.6"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
-  },
-  "scripts": {
-    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
     "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie": "^0.5.0",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.3",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.2"
   }
 }
