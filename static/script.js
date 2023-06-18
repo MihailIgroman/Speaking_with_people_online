@@ -57,4 +57,4 @@ xhr.onload = function() {
     $('#temp').html(weather.current.temp_c + "°C");
   }
 }
-}
+
