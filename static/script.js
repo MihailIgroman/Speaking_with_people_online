@@ -46,5 +46,15 @@ let weather = "";
 xhr.onload = function() {
 	weather = xhr.response;
 	console.log(weather);
-	$(".header").html("C"+weather['current']['temp_c']);
+  if (xhr.status > 399) {
+    $("#result").html("There is some error...");
+  }
+  else {
+    console.log(weather);
+    console.log(weather.current);
+    $('#icon').attr("src", "https:" + weather.current.condition.icon);
+    $('#city').html(weather.location.country + " , " + weather.location.name);
+    $('#temp').html(weather.current.temp_c + "°C");
+  }
+}
 }
