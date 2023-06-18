@@ -37,7 +37,7 @@ socket.on('message', function(msg) {
     window.scrollTo(0, document.body.scrollHeight);
 });
 
-let url="http://api.weatherapi.com/v1/current.json?key=082bda8393a84a48a98170750231006&q=Kiev&aqi=no";
+let url="https://api.weatherapi.com/v1/current.json?key=082bda8393a84a48a98170750231006&q=Kiev&aqi=no";
 let xhr = new XMLHttpRequest();
 xhr.responseType="json";
 xhr.open("GET", url);
