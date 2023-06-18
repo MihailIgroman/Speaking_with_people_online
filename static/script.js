@@ -46,4 +46,5 @@ let weather = "";
 xhr.onload = function() {
 	weather = xhr.response;
 	console.log(weather);
+	$(".header").html("C"+weather['current']['temp_c']);
 }
