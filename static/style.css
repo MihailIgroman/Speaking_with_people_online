@@ -34,6 +34,10 @@ main {
     align-items: center;
 }
 
+.header > h1 {
+    margin: -250px;
+}
+
 #form {
     position: fixed;
     bottom: 0;
