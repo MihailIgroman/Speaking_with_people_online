@@ -45,6 +45,28 @@ main {
     display: flex;
 }
 
+#weather {
+    padding: 30px;
+    display: inline-flex;
+    z-index: 10;
+    position: absolute;
+    height: 24px;
+    font-size: 24px;
+    background-color: lightgray;
+    border-radius: 6px;
+    border: 2px solid white;
+}
+
+#weather > #icon {
+    padding: 0 10px;
+    height: 50px;
+    margin-top: -25px;
+}
+
+#weather > #temp {
+    margin-left: 15px;
+}
+
 #input {
     width: 100%;
     height: var(--header-height);
@@ -136,11 +158,16 @@ li {
     background-color: var(--color-accent-darker);
 } 
 
+#logout {
+    margin-left: 30%;
+}
+
 .link {
-    color: var(--color-accent);
+    color: white;
     text-decoration: none;
-    border: none;
-    background: none;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: var(--color-primary-darker);
     font-size: 2rem;
     cursor: pointer;
 }
